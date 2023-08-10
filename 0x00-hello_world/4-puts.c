@@ -2,7 +2,7 @@
 /**
  * main - entry point
  *
- * Description: this program will print Programming is like building a multilingual puzzle
+ * Description: 'print statement'
  *
  * Reture: Always 0 (Success)
  */
