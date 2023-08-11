@@ -2,7 +2,7 @@
 /**
  * main - entry point
  *
- * Description: 'print statement'
+ * Description: A C program will prints with put function
  *
  * Reture: Always 0 (Success)
  */
