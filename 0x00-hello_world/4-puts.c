@@ -1,8 +1,8 @@
 #include<stdio.h>
 /**
- * main - entry point
+ * main - Entry point
  *
- * Description: 'A C program will prints with put function'
+ * Description : 'print \"Programming is like building a multilingual puzzle'
  *
  * Reture: Always 0 (Success)
  */
