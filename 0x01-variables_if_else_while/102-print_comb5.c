@@ -22,6 +22,10 @@ int main(void)
 					{
 						continue;
 					}
+					if (z == x && g == y)
+					{
+						continue;
+					}
 					putchar(x + 48);
 					putchar(y + 48);
 					putchar(' ');
