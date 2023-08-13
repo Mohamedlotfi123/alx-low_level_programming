@@ -13,7 +13,7 @@ int main(void)
 
 	for (x = 48; x <= 57; x++)
 	{
-		for  (y = 1+x; y <= 57; y++)
+		for  (y = 1 + x; y <= 57; y++)
 		{
 			if (x != y)
 			{
