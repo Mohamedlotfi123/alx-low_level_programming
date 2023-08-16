@@ -16,11 +16,11 @@ void print_to_98(int n)
 		{
 			if (x == 98)
 			{
-				printf("%d\n",x);
+				printf("%d\n", x);
 			}
 			else
 			{
-				printf("%d, ",x);
+				printf("%d, ", x);
 			}
 		}
 	}
@@ -30,17 +30,17 @@ void print_to_98(int n)
 		{
 			if (x == 98)
 			{
-				printf("%d\n",x);
+				printf("%d\n", x);
 			}
 			else
 			{
-				printf("%d, ",x);
+				printf("%d, ", x);
 			}
 		}
 	}
 	else if (n == 98)
 	{
-		printf("%d\n",n);
+		printf("%d\n", n);
 	}
 
 }
