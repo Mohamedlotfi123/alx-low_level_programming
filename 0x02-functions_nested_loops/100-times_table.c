@@ -25,15 +25,15 @@ void print_times_table(int n)
 				{
 					printf("%d\n", y);
 				}
-				else if (y <= 9)
+				if (y < 9)
 				{
 					printf("%d,   ", y);
 				}
-				else if (y <= 99)
+				else if (y < 99 || y == 9)
 				{
 					printf("%d,  ",y);
 				}
-				else
+				else if (y > 99 || y == 99)
 				{
 					printf("%d, ",y);
 				}
