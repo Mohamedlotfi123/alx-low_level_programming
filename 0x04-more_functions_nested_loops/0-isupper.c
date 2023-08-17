@@ -7,17 +7,12 @@
  */
 int _isupper(int c)
 {
-	_putchar(c);
-	_putchar(':');
-	_putchar(32);
 	if (c >= 65 && c <= 90)
 	{
-		_putchar(49);
+		return (1);
 	}
 	else
 	{
-		_putchar(48);
+		return (0);
 	}
-	_putchar('\n');
-	return (0);
 }
