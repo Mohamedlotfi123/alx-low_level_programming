@@ -7,7 +7,7 @@
  */
 void print_number(int n)
 {
-	if(n == 98)
+	if (n == 98)
 	{
 		_putchar(57);
 		_putchar(56);
@@ -29,7 +29,7 @@ void print_number(int n)
 	{
 		_putchar(48);
 	}
-	else 
+	else
 	{
 		_putchar('-');
 		_putchar(57);
