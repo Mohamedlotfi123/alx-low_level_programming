@@ -5,7 +5,7 @@
  * @src : second string
  * @n : number of byets
  *
- * Return: string 
+ * Return: string
  */
 char *_strncpy(char *dest, char *src, int n)
 {
