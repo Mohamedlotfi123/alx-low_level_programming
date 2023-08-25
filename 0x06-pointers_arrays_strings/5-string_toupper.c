@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * *string_toupper - changes all lowercase to uppercase
- *@s : string 
+ *@s : string
  *
  * Return: string
  */
@@ -19,4 +19,3 @@ char *string_toupper(char *s)
 	}
 	return (s);
 }
-		
