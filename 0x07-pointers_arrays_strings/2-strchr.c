@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stddef.h>
 /**
  * *_strchr - locates a character in a string
  * @s : string will be send
@@ -20,5 +19,5 @@ char *_strchr(char *s, char c)
 		}
 		y++;
 	}
-	return (NULL);
+	return ('\0');
 }
