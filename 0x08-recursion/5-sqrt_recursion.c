@@ -14,10 +14,16 @@ int _sqrt_recursion(int n)
 	{
 		return (-1);
 	}
-	return (_sqrt_recursion2(n,0));
+	return (_sqrt_recursion2(n, 0));
 }
 
-
+/**
+ * _sqrt_recursion2 - square root
+ * @n : number we want it is square root
+ * @x : tester
+ *
+ * Return: integer
+ */
 int _sqrt_recursion2(int n, int x)
 {
 	if (x * x > n)
