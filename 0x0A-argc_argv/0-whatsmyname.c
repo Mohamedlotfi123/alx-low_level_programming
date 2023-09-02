@@ -1,13 +1,13 @@
 #include<stdio.h>
 /**
- * main - check 
+ * main - check
  * @argc : argument count
  * @argv : argument vector
  *
  * Return: name of file
  */
-int main (int argc, char * argv[])
+int main(int argc, char *argv[])
 {
-	printf("%s\n",argv[argc - argc]);
+	printf("%s\n", argv[argc - argc]);
 	return (0);
-}	
+}
