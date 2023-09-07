@@ -2,11 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * *_calloc - allocate memory for and array
+ * _calloc - allocate memory for and array
  * @nmemb : number of element
  * @size : size of each element
  *
- * Retrun: pointer to allcoated space
+ * Return: pointer to allcoated space
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
@@ -20,7 +20,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	x = malloc(nmemb * size);
 	for (; y < (nmemb * size); y++)
 	{
-		if ( x == NULL)
+		if (x == NULL)
 		{
 			return (NULL);
 		}
