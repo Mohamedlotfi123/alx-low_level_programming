@@ -3,7 +3,7 @@
 #include <stdlib.h>
 /**
  * *_realloc - reallocate a memory block using malloc and free
- * @*ptr : pointer point to memory previously allocated
+ * @ptr : pointer point to memory previously allocated
  * @old_size : old size that allcoated
  * @new_size : new size will allocate
  *
@@ -11,36 +11,40 @@
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	void *x;
-	unsigned int y = 0, z = 0;
+	char *x, *y;
+	unsigned int z = 0;
 
-	x = malloc(old_size);
-	for (; y <= old_size; y++)
-	{
-		(int *)x[y] = (int *)ptr[y];
-	}
-	free(ptr);
-	ptr = malloc(new_size);
-	for (; z <= new_size; z++)
-	{
-		(int *)ptr[z] = (int *)x[new_size + z];
-	}
-	free(x);
-	if (new_size > old_size)
-	{
-		return (ptr);
-	}
 	if (new_size == old_size)
 	{
 		return (ptr);
 	}
 	if (ptr == NULL)
 	{
-		return (ptr);
+		return (malloc(new_size));
 	}
 	if (new_size == 0 && ptr != NULL)
 	{
 		free(ptr);
 		return (NULL);
 	}
+	x = malloc(new_size);
+	if (x == NULL)
+	{
+		return (NULL);
+	}
+	y = ptr;
+	if (new_size < old_size)
+	{
+		for (; z < new_size; z++)
+		{
+			x[z] = y[z];
+		}
+	}
+	if (new_size > old_size)
+	{
+		for (; z < old_size; z++)
+			x[z] = y[z];
+	}
+	free(ptr);
+	return (x);
 }
