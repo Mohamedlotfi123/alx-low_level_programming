@@ -16,11 +16,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int z = 0;
 
 	x = malloc(sizeof(s1) + n + 1);
-	if (s1 == NULL)
+	if (*s1 == NULL)
 	{
-		*s1 = ' ';
+		*s1 = " ";
 	}
-	if (s2 == NULL)
+	if (*s2 == NULL)
 	{
 		*s2 = ' ';
 	}
