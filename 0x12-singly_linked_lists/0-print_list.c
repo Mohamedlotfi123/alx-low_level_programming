@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdlib.h>
 #include<stddef.h>
 #include <stdio.h>
 /**
@@ -10,21 +11,27 @@
 size_t print_list(const list_t *h)
 {
 	size_t n;
+	list_t *ptr = malloc(sizeof(list_t));
 
-	while (h != NULL)
+	if (h == NULL)
 	{
-		if (h->str == NULL)
+		return (0);
+	}
+	ptr = (list_t *)h;
+	while (ptr != NULL)
+	{
+		if (ptr->str == NULL)
 		{
 			n++;
 			printf("[0] (nil)\n");
-			h = h->next;
+			ptr = ptr->next;
 		}
 		else
 		{
 			n++;
-			printf("[%d] %s\n", h->len, h->str);
-			h = h->next;
+			printf("[%u] %s\n", ptr->len, ptr->str);
+			ptr = ptr->next;
 		}
 	}
-	return ((long int)n);
+	return (n);
 }
