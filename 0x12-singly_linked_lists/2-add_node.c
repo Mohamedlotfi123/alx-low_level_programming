@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <string.h>
 #include <stdlib.h>
 /**
  * add_node - add a new node at the begginning of the list_t
@@ -21,7 +22,7 @@ list_t *add_node(list_t **head, const char *str)
 		lent++;
 		x++;
 	}
-	new->str = (char *)str;
+	new->str = strdup((char *)str);
 	new->len = lent;
 	new->next = *head;
 	*head = new;
