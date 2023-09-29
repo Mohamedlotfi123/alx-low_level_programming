@@ -14,6 +14,10 @@ unsigned int binary_to_uint(const char *b)
 	{
 		x = x + 1;
 	}
+	if (x == 0)
+	{
+		return (0);
+	}
 	x = x - 1;
 	while (x >= 0)
 	{
