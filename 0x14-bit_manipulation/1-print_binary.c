@@ -7,14 +7,21 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int x;
-	int y;
+	unsigned long int x, z;
+	int y, c = 0;
 
 	if (n == 0)
 	{
 		_putchar('0');
 	}
-	for (y = 63; y >= 0; y--)
+	z = n;
+	while (z != 0)
+	{
+		c = c + 1;
+		z = z >> 1;
+	}
+	y = c;
+	for (; y >= 0; y--)
 	{
 		x = n >> y;
 		if (x & 1)
