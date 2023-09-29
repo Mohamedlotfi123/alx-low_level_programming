@@ -20,7 +20,7 @@ void print_binary(unsigned long int n)
 		c = c + 1;
 		z = z >> 1;
 	}
-	y = c;
+	y = c - 1;
 	for (; y >= 0; y--)
 	{
 		x = n >> y;
