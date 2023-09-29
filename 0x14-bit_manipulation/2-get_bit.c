@@ -8,9 +8,19 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned long int x = 0;
+	unsigned long int x = 0, z, c = 0;
 	int y;
 
+	z = n;
+	while (z != 0)
+	{
+		c = c + 1;
+		z = z >> 1;
+	}
+	if (index > c)
+	{
+		return (-1);
+	}
 	while (x <= index)
 	{
 		y = n & 1;
