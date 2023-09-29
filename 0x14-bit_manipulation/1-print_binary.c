@@ -7,17 +7,23 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int x, y;
+	unsigned long int x;
+	int y;
 
 	if (n == 0)
 	{
 		_putchar('0');
 	}
-	while (n != 0)
+	for (y = 63; y >= 0; y--)
 	{
-		x = n & 1;
-		y 
-		n = n >> 1;
-		_putchar(x + 48);
+		x = n >> y;
+		if (x & 1)
+		{
+			_putchar('1');
+		}
+		else
+		{
+			_putchar('0');
+		}
 	}
 }
