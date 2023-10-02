@@ -23,6 +23,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	count = read(fp, &c[0], letters);
 	count = write(1, &c[0], count);
+	if (!count)
+	{
+		return (0);
+	}
 	close(fp);
 	return (count);
 }
