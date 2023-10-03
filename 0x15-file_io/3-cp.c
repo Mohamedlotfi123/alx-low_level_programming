@@ -4,13 +4,13 @@
  * @argc : number of argument
  * @argv : array of argument
  *
- * Return : 1 on success or -1 on fail
+ * Return: 1 on success or -1 on fail
  */
 int main(int argc, char *argv[])
 {
 	int fp, fp1;
 	char c[1024];
-	size_t z;
+	ssize_t z;
 
 	if (argc != 3)
 	{
@@ -33,5 +33,11 @@ int main(int argc, char *argv[])
 	{
 		write(fp1, c, z);
 	}
+	if (z == -1)
+	{
+		dprintf(2, "Error: Can't read from file %s", argv[1]);
+	}
+	close(fp);
+	close(fp1);
 	return (1);
 }
