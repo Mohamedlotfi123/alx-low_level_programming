@@ -21,10 +21,10 @@ int square(int n, int x)
 /**
  * _sqrt_recursion - Calculate natural square root
  * @n : Number to calculate it's root
- * 
+ *
  * Return: natural square root of n
  */
 int _sqrt_recursion(int n)
 {
-	return (square(n , 0));
+	return (square(n, 0));
 }
