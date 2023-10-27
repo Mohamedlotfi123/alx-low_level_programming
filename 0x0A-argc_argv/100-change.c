@@ -25,26 +25,39 @@ int main(int argc, char *argv[])
 	{
 		if (atoi(argv[1]) == 1)
 		{
-			printf("1");
+			printf("1\n");
 			return (0);
 		}
 		for (i = 0; x[i] != '\0'; i++)
 		{
 			r = atoi(argv[1]) % x[i];
+			d = atoi(argv[1]) / x[i];
 			if (r == 0)
 			{
-				d = atoi(argv[1]) / x[i];
-				printf("%d\n", d);
-				return (0);
+				break;
 			}
 			else if (r == 1 || r == 2 || r == 5 || r == 10 || r == 25)
 			{
-				d = atoi(argv[1]) / x[i];
 				d = d + 1;
-				printf("%d\n", d);
-				return (0);
+				break;
+			}
+			else if (r == 3 || r == 4 || r == 7)
+			{
+				d = d + 2;
+				break;
+			}
+			else if (r == 6 || r == 9)
+			{
+				d = d + 3;
+				break;
+			}
+			else if (r == 8)
+			{
+				d = d + 4;
+				break;
 			}
 		}
+		printf("%d\n", d);
 	}
 	return (0);
 }
