@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strup - allocate space of memory contains copy of the srting
+ * _strdup - allocate space of memory contains copy of the srting
  * @str : string to by copied
  *
  * Return: Pointer to the copy or NULL if fail
@@ -18,7 +18,7 @@ char *_strdup(char *str)
 	{
 		len++;
 	}
-	copy = malloc(sizeof(char) * len);
+	copy = malloc(sizeof(char) * len + 1);
 	if (copy == NULL)
 	{
 		return (NULL);
