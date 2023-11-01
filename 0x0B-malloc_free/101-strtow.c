@@ -14,6 +14,10 @@ char **strtow(char *str)
 	{
 		return (NULL);
 	}
+	if (*str == ' ' && *(str + 1) == '\0')
+	{
+		return (NULL);
+	}
 	while (str[x])
 	{
 		if (str[x] == ' ' && str[x + 1] != ' ' && str[x + 2] != ' ')
