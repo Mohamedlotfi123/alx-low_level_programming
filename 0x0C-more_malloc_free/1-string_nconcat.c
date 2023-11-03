@@ -60,6 +60,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	while (y < n)
 	{
+		if (s2[y] == '\0')
+			break;
 		ptr[x] = s2[y];
 		y++;
 		x++;
