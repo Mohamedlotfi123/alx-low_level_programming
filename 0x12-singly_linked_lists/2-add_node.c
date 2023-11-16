@@ -1,7 +1,7 @@
 #include"lists.h"
 #include <string.h>
 /**
- * _strlen : count the length o the string
+ * _strlen - count the length o the string
  * @s : string pointer
  *
  * Return: Length of the string
@@ -21,7 +21,7 @@ unsigned int _strlen(const char *s)
 	return (i);
 }
 /**
- * add_node : adds new node at the beginning
+ * add_node - adds new node at the beginning
  * @head : Pointer to first element
  * @str : value of the node
  *
