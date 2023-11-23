@@ -1,5 +1,27 @@
 #include "main.h"
 /**
+ * print - print binary number
+ * @x : decimal number
+ *
+ * Return: Void
+ */
+void print(unsigned long int x)
+{
+	if (x == 0)
+	{
+		return;
+	}
+	print(x >> 1);
+	if (x & 1)
+	{
+		_putchar('1');
+	}
+	else
+	{
+		_putchar('0');
+	}
+}
+/**
  * print_binary - prints the binary representation of a number
  * @n : Number in decimal
  *
@@ -7,19 +29,12 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int x = 1024;
-	int y = 0;
-
-	for (y = 11; y > 0; y--)
+	if (n == 0)
 	{
-		if (n & x)
-		{
-			_putchar('1');
-		}
-		else
-		{
-			_putchar('0');
-		}
-		x = x >> 1;
+		_putchar('0');
+	}
+	else
+	{
+		print(n);
 	}
 }
