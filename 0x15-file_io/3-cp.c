@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	if (fd_1 < 0 || i < 0)
 	{
 		dprintf(1, "Error: Can't read to %s", argv[1]);
-		write(2 ,"\n", 1);
+		write(2, "\n", 1);
 		exit(98);
 	}
 	fd_2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
