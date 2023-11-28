@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 		write(2, "\n", 1);
 		exit(98);
 	}
-	fd_2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	fd_2 = open(argv[2], O_WRONLY | O_CREAT, 0664);
 	x = write(fd_2, buf, i);
 	if (fd_2 < 0 || x < 0)
 	{
