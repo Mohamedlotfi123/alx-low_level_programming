@@ -24,7 +24,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (1);
 	}
 	x = key_index((const unsigned char *)key, ht->size);
-	if (ht->array[x] == NULL)
+	if (!ht->array[x])
 	{
 		strcpy(node->key, key);
 		strcpy(node->value, value);
