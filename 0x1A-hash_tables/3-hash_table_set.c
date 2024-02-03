@@ -39,18 +39,19 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		}
 		else
 		{
-			if (node->next == NULL)
+			node->next = ht->array[x];
+			ht->array[x] = node;
+			/*if ((ht->array[x])->next == NULL)
 			{
 				node->next = ht->array[x];
 				ht->array[x] = node;
 			}
 			else
 			{
-				while (node->next != NULL)
-					node = node->next;
-				node->next = ht->array[x];
+				ptr = ht->array[x];
+				node->next = ptr;
 				ht->array[x] = node;
-			}
+			}*/
 		}
 	}
 	return (0);
