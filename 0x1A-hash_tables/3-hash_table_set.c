@@ -13,6 +13,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long x;
 	hash_node_t *node;
 
+	if (key == NULL)
+	{
+		return (1);
+	}
 	node = malloc(sizeof(hash_node_t));
 	if (node == NULL)
 		return (1);
@@ -30,6 +34,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	else
 	{
+		if (x >= ht->size)
+		{
+			return (1);
+		}
 		if (strcmp((ht->array[x])->key, key) == 0)
 		{
 			strcpy((ht->array[x])->value, value);
