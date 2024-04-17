@@ -9,7 +9,7 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	int index;
+	unsigned long int index;
 	hash_node_t *node, *ptr;
 
 	node = malloc(sizeof(hash_node_t));
@@ -17,7 +17,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	index = key_index((const unsigned char *)key, ht->size);
 
-	if (key == NULL || index >= 1024)
+	if (key == NULL || index >= ht->size)
 		return (0);
 	if (ht != NULL)
 	{
