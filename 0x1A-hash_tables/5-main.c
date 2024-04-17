@@ -12,7 +12,7 @@ int main(void)
 {
 	hash_table_t *ht;
 
-	ht = hash_table_create(30);
+	ht = hash_table_create(1024);
 	hash_table_set(ht, "USA", "Washington");
 	hash_table_set(ht, "France", "Paris");
 	hash_table_set(ht, "UK", "London");
