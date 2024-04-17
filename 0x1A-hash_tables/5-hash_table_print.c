@@ -20,14 +20,14 @@ void hash_table_print(const hash_table_t *ht)
 			{
 				if (count != 0)
 					printf(", ");
-				printf("%s: %s", ptr[i]->key, ptr[i]->value);
+				printf("'%s': '%s'", ptr[i]->key, ptr[i]->value);
 				count += 1;
 				if (ptr[i]->next != NULL)
 				{
 					tmp = ptr[i]->next;
 					while (tmp)
 					{
-						printf("%s: %s", tmp->key, tmp->value);
+						printf("'%s': '%s'", tmp->key, tmp->value);
 						tmp = tmp->next;
 					}
 				}
