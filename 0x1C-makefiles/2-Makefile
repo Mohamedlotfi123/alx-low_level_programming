@@ -10,5 +10,5 @@ all: ${NAME}
 ${NAME}: ${OBJ}
 	${CC} ${OBJ} -o ${NAME}
 
-%.o: %.c
+%.o: %.c m.h
 	${CC} -c $< -o $@
